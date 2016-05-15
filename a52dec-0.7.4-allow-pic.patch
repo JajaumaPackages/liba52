@@ -1,0 +1,22 @@
+--- a52dec-0.7.4/liba52/configure.incl~	2002-01-28 07:36:48.000000000 +0300
++++ a52dec-0.7.4/liba52/configure.incl	2016-05-15 14:44:05.388802468 +0300
+@@ -1,9 +1,6 @@
+ AC_SUBST([LIBA52_CFLAGS])
+ AC_SUBST([LIBA52_LIBS])
+ 
+-dnl avoid -fPIC when possible
+-LIBA52_CFLAGS="$LIBA52_CFLAGS -prefer-non-pic"
+-
+ AC_ARG_ENABLE([double],
+     [  --enable-double         use double-precision samples])
+ if test x"$enable_double" = x"yes"; then
+--- a52dec-0.7.4/configure~	2002-07-28 07:50:42.000000000 +0400
++++ a52dec-0.7.4/configure	2016-05-15 14:57:25.593644394 +0300
+@@ -9640,7 +9640,6 @@
+ 
+ 
+ 
+-LIBA52_CFLAGS="$LIBA52_CFLAGS -prefer-non-pic"
+ 
+ # Check whether --enable-double or --disable-double was given.
+ if test "${enable_double+set}" = set; then
